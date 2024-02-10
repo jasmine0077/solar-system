@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(space.png);
+
+}
+
+.space {
+    font-size: 10px;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}  
+
+.sun {
+    position: absolute;
+    top: 14em;
+    left: 10em;
+    width: 15em;
+    height: 15em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 1em 1em 5em rgb(241, 206, 140);
+}
+
+.mercury {
+    top: 7em;
+    left: 2em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 45s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+
+.venus{
+    top: 3em;
+    left: -2em;
+    width: 40em;
+    height: 40em;
+    animation: orbit 40s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+
+.earth {
+    top: -6em;
+    left: -8em;
+    width: 55em;
+    height: 55em;
+    animation: orbit 35s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+ 
+.mars {
+    top: -13em;
+    left: -13em;
+    width: 72em;
+    height: 72em;
+    animation: orbit 30s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+
+.jupiter {
+    top: -15em;
+    left: -13em;
+    width: 85em;
+    height: 85em;
+    animation: orbit 25s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+
+.saturn {
+    top: -22em;
+    left: -17em;
+    width: 110em;
+    height: 110em;
+    animation: orbit 25s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+
+.uranus {
+    top: -33em;
+    left: -35em;
+    width: 150em;
+    height: 150em;
+    animation: orbit 22s linear infinite; 
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+
+.neptune {
+    top: -40em;
+    left: -50em;
+    width: 180em;
+    height: 180em;
+    animation: orbit 20s linear infinite;
+    position: absolute;
+    border-radius: 50%; 
+    border: 1px solid rgb(156, 155, 153);
+} 
+
+.moon {
+    top: 1.3em;
+    right: 4em;
+    width: 10em;
+    height: 10em;
+    animation: orbit 4.7s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 153);
+}
+
+.ring {
+    right: 20em;
+    top: 2.5em;
+    width: 18em;
+    height: 5em;
+    position: absolute;
+    border-radius: 50%;
+    border-bottom: 4px solid rgb(156, 155, 153);
+    border-right: 4px solid rgb(156, 155, 153);
+    border-left: 4px solid rgb(156, 155, 153);
+}
+
+.earth::before, .moon::before, .mars::before, .mercury::before, .venus::before, .jupiter::before, .saturn::before, .uranus::before, .neptune::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mercury::before {
+    top: 2em;
+    right: 4em;
+    width: 2.5em;
+    height: 2.5em;
+    background: linear-gradient(to right, red, rgb(66, 30, 30));
+}
+
+.venus::before {
+    top: 2.8em;
+    right: 3.3em;
+    width: 5em;
+    height: 5em;
+    background: linear-gradient(to right, rgb(247, 161, 2), black);
+}
+
+.earth::before {
+    top: 2.8em;
+    right: 6em;
+    width: 6.5em;
+    height: 6.5em;
+    background: linear-gradient(to right, aqua, rgb(69, 247, 69));
+}
+
+.mars::before {
+    right: 12em;
+    width: 9em;
+    height: 9em;
+    background: linear-gradient(to right, rgb(194, 27, 27), rgb(136, 101, 101));
+}
+
+.jupiter::before {
+    right: 6em;
+    width: 15em;
+    height: 15em;
+    background: linear-gradient(to right, rgb(70, 16, 16), rgb(102, 102, 13));
+}
+
+.saturn::before {
+    right: 25em;
+    width: 10em;
+    height: 10em;
+    background: linear-gradient(to right, rgb(85, 67, 16), silver);
+}
+
+.uranus::before {
+    right: 40em;
+    width: 10em;
+    height: 10em;
+    background: linear-gradient(to right, rgb(33, 20, 207), rgb(245, 247, 245));
+}
+
+.neptune::before {
+    right: 65em;
+    width: 5em;
+    height: 5em;
+    background: linear-gradient(to right, rgb(86, 8, 94), white);
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 2em;
+    height: 2em;
+    background-color: silver;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(
+            360deg
+        );
+    }
+} 
